@@ -112,6 +112,25 @@
                 float:left;
             }
 
+            #content-left ul{
+                display: block;
+            }
+
+            #content-left ul li{
+                list-style: none;
+                text-align: center;
+                font-size: 18px;
+                padding-top: 20px;
+                
+            }
+            #content-left ul li a{
+                text-decoration: none;
+            }
+            #content-left ul li a:hover{
+                color: red;
+            }
+            
+
             #content-mid{
                 width: 580px;
                 height:500px;
@@ -126,7 +145,17 @@
                 float:left;
             }
 
+            #content-right-top{
+                width: 200px;
+                height:250px;
+                background-color: red;
+            }
 
+            #content-right-bottom{
+                width: 200px;
+                height:250px;
+                background-color:blue;
+            }
             
             
             #footer{
@@ -137,17 +166,27 @@
 
 
             #footer-left{
-                height:70px;
-                width: 490px;
+                height:45px;
+                width: 550px;
                 background-color: rosybrown;
                 float:left;
+                /*text-align: center;
+                line-height: 70px;
+                color: blue;*/
+                padding-left: 150px;
+                padding-top: 25px;
             }
 
             #footer-right{
-                height:70px;
-                width: 490px;
+                height:45px;
+                width: 250px;
                 background-color: rebeccapurple;
                 float:left;
+                /*text-align: center;
+                line-height: 70px;
+                color: white;*/
+                padding-left: 30px;
+                padding-top: 25px;
             }
 
             
@@ -203,14 +242,46 @@
             </div> 
 
             <div id ="content">
-                <div id ="content-left"></div>                    
-                <div id ="content-mid"></div>
+                <div id ="content-left">
+                    <div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="index.html">About</a></li>
+                            <li><a href="index.html">Course</a></li>
+                            <li><a href="index.html">Gallery</a></li>
+                            <li><a href="index.html">Services</a></li>
+                            <li><a href="index.html">Career</a></li>
+                            <li><a href="index.html">Clients</a></li>
+                            <li><a href="index.html">Technology</a></li>
+                            <li><a href="index.html">Partners</a></li>
+                            <li><a href="index.html">Our Work</a></li>
+                            <li><a href="index.html">Contact us</a></li>
+                        </ul>
+
+
+                    </div>
+
+                </div>  
+
+                <div id ="content-mid">
+                    <h1>
+                        Hi welcome to Home Page
+                    </h1>
+                </div>
                 
                 <div id ="content-right">
                 
-                    <div id ="content-right-top"></div>
+                    <div id ="content-right-top">
+                        <marquee direction="right" >
+                            <img src="images/visitngcard_sathish.jpg" width=200px height = 250px>
+                        </marquee>
+                    </div>
                 
-                    <div id ="content-right-bottom"></div>
+                    <div id ="content-right-bottom">
+                        <marquee>
+                            <img src="images/logo.JPG" width=200px height = 250px>
+                        </marquee>
+                    </div>
                 
                 </div>
                 
@@ -219,9 +290,15 @@
             
             <div id ="footer">
             
-                <div id ="footer-left"></div>
+                <div id ="footer-left">
+
+                    <h3>all the copy right reserved &copy; magna</h3>
+
+                </div>
             
-                <div id ="footer-right"></div>
+                <div id ="footer-right">
+                    <h3>Designed by lavan</h3>
+                </div>
             
             </div>
                 
