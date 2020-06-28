@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+            Your browser does not support the HTML canvas tag.
+        </canvas>
+
+        <script>
+
+            var canvas = document.querySelector("canvas");
+            canvas.width = window.innerWidth * 0.8;
+            canvas.height = window.innerHeight * 0.8;
+             var c= canvas.getContext('2d');
+
+            var mouseDragg = false;
+            function MouseDown(event){
+                mouseDragg = true;
+            }
+
+            function MouseMove(event){
+
+            }
+
+            function MouseUp(event){
+                mouseDragg = false;
+            }
+
+            function DoubleClick(event){
+                console.log(event);
+            }
+
+            canvas.addEventListener("mousedown", MouseDown);
+            canvas.addEventListener("mousemove", MouseMove);
+            canvas.addEventListener("mouseup", MouseUp);
+            canvas.addEventListener("dblclick", DoubleClick);
+
+            
+
+        </script>
+    </body>
+</html>
+

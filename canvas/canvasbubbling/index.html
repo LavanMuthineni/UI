@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+   <html>
+
+<head>
+<title>canvas resize</title>
+
+<style>
+
+canvas{
+    border:1px black solid;
+      
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+<canvas></canvas>
+
+
+
+<script>
+
+   var canvas=document.querySelector('canvas');
+    canvas.height=window.innerHeight;
+    canvas.width=window.innerWidth;
+    
+    var c=canvas.getContext('2d');
+    /*c.fillRect(100,100,50,50);
+    c.fillRect(300,100,50,50);
+    c.fillStyle="red";
+    c.fillRect(100,100,50,50);
+
+    c.fillRect(100,100,50,50);
+
+    c.beginPath();
+    c.moveTo(100,200);
+    c.lineTo(300,200);
+    c.lineTo(400,500);
+    c.strokeStyle="red";
+    c.lineTo(100,500);
+    c.lineTo(100,200);
+   
+    c.stroke(); 
+
+
+
+
+c.beginPath();
+c.arc(300,300,100,0,2*Math.PI,true)
+
+  c.stroke();  
+  var x=Math.random()*window.innerWidth;
+    var y=Math.random()*window.innerHeight;
+
+for(var i=0;i<300;i+=5){
+  
+    c.beginPath();
+    c.arc(x+i,y,15,0,2*Math.PI);
+    c.stroke();
+    console.log(Math.random());
+}*/
+
+
+
+    function Circle(x,y){
+        this.x=x;
+        this.y=y;
+
+        this.draw=function(){
+            
+            c.beginPath();
+            c.arc(x,y,30,0,Math.PI*2);
+            c.strokeStyle='blue';
+            c.stroke();
+
+
+
+        }
+    }
+
+ var Circle=new Circle(200,200)
+
+
+
+    var x=Math.random()*innerWidth;
+    var y=Math.random()*innerHeight;
+    var dy=5;
+    var dx=5;
+    
+    var radius=30;
+    function animate(){
+       
+        requestAnimationFrame(animate);
+       
+       c.clearRect(0,0,innerWidth,innerHeight);
+       Circle.draw();
+        c.beginPath();
+        c.strokeStyle="red";
+        c.arc(x,y,radius,0,Math.PI*2,true);
+        c.stroke();
+
+        if(x+radius>innerWidth || x< radius){
+            dx=-dx;
+        }
+        if(y+radius>innerHeight|| y<radius){
+            dy=-dy;
+        }
+
+        y+=dy;
+        x+=dx;
+    }
+    animate();
+
+
+
+</script>
+
+
+</body>
+
+
+
+
+</html>
